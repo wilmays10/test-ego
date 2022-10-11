@@ -9,5 +9,12 @@ source env/bin/activate
 # instalar dependencias
 pip3 install -r requirements.txt
 
+# Creacion base de datos
+python manage.py makemigrations tracking
+python manage.py migrate
+
+# Carga de datos de ejemplo
+python manage.py loaddata init_data/db.json
+
 # Inicializar server local
 python manage.py runserver
