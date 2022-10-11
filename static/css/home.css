@@ -1,0 +1,53 @@
+.letter-title {
+    /*width: 699px;*/
+    /*height: 57px;*/
+
+    /*font-family: 'Montserrat';*/
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 57px;
+    /* identical to box height, or 114% */
+
+    letter-spacing: -1px;
+
+    color: #373737;
+}
+.letter-title-card {
+    height: 30px;
+    left: 1.49%;
+    right: 1.12%;
+    top: calc(50% - 30px/2 - 92.5px);
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 30px;
+    /* identical to box height, or 107% */
+
+    text-align: center;
+    letter-spacing: -0.653333px;
+
+    color: #000000;
+}
+.letter-text-card {
+    height: 17px;
+    left: 0%;
+    right: 0%;
+    top: calc(50% - 17px/2 - 61px);
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: -0.28px;
+
+    color: #191919;
+}
+/*.tab-title a:hover {*/
+/*    color: #D0021B;*/
+/*}*/

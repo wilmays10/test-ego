@@ -1,0 +1,36 @@
+.navbar-text {
+    /*position: absolute;*/
+    height: 24px;
+    left: 61.54%;
+    right: 0%;
+    top: calc(50% - 24px/2 - 55.5px);
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: right;
+    letter-spacing: -0.1px;
+
+    color: #000000;
+}
+
+.filter-text {
+    height: 14px;
+    left: 38.82%;
+    right: 31.79%;
+    top: calc(50% - 14px/2 - 0.5px);
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    /* identical to box height, or 100% */
+
+    text-align: center;
+    letter-spacing: 0.07875px;
+
+    color: #373737;
+}
