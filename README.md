@@ -20,6 +20,11 @@ El modelado de la base de datos contempla autómoviles para cualquier marca, mod
 De acuerdo al diseño entregado, tuve que considerar algunas versiones como modelos(por ejemplo:
 la SW4 es una versión particular del modelo Hilux).
 
+# Home
+Una vez que esté ejecuntandosé el servidor local, se puede acceder al home:
+
+http://localhost:8000/
+
 # API's
 Una vez que esté ejecuntandosé el servidor local, se puede acceder a las API's:
 

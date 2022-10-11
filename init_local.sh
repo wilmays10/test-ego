@@ -10,7 +10,6 @@ source env/bin/activate
 pip3 install -r requirements.txt
 
 # Creacion base de datos
-python manage.py makemigrations tracking
 python manage.py migrate
 
 # Carga de datos de ejemplo
