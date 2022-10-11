@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Ficha{% endblock title %}
+{% block css %}
+<link href="{% static 'css/data.css'%}" rel="stylesheet" type="text/css" />
+{% endblock css %}
+{% block content %}
+  <main id="main">
+    <section class="section site-portfolio">
+      <div class="container">
+        Ficha
+      </div>
+    </section>
+  </main>
+
+{% endblock content %}
+
+{% block javascript %}
+  <script type="text/javascript">
+    window.onload = function () {
+      let div = document.getElementById('data');
+      div.style = 'border-bottom: 2px solid red; color: #D0021B; padding-bottom: 15px;';
+
+    }
+  </script>
+{% endblock javascript %}

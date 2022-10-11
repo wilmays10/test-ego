@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block css %}
+<link href="{% static 'css/home.css'%}" rel="stylesheet" type="text/css" />
+{% endblock css %}
+{% block content %}
+  <main id="main">
+    <section class="section site-portfolio">
+      <div class="text-center letter-title mb-5">
+        Descubrí todos los modelos
+      </div>
+
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-12 col-lg-12 text-start text-lg-end" data-aos="fade-up" data-aos-delay="100">
+            <div id="filters" class="filters">
+              <a href="#" data-filter="*" class="active">Todos</a>
+              <a href="#" data-filter=".web">Autos</a>
+              <a href="#" data-filter=".design">Pickups y Comerciales</a>
+              <a href="#" data-filter=".branding">SUVs y Crossovers</a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
+        <!-- Acá se insertan los datos de autos dinamicamente -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+{% endblock content %}
+
+{% block javascript %}
+  <script>
+    function createNode(element) {
+      return document.createElement(element);
+    }
+
+    function append(parent, el) {
+      return parent.appendChild(el);
+    }
+
+    function load_data(url) {
+        fetch(url)
+        .then((resp) => resp.json())
+        .then(function(data) {
+          data.forEach(function (car){
+            let year = car.price_set[0].year;
+            let price = car.price_set[0].price;
+            let divMajor = createNode('div');
+            let divbody = createNode('div');
+            let h3 = createNode('h3');
+            let p = createNode('p');
+            let image = createNode('img');
+            let img = car.photo;
+
+            divMajor.className = 'card mb-5 border-0';
+            divMajor.style = 'width: 17rem;';
+            divbody.class = 'card-body';
+            h3.innerHTML = car.group;
+            h3.className = 'card-title text-center letter-title-card';
+            p.className = 'card-text text-center';
+            p.innerHTML = year + ' | $' + price;
+            image.src = img;
+            image.className = 'card-img-top';
+
+            append(divbody, h3);
+            append(divbody, p);
+            append(divMajor, divbody);
+            append(divMajor, image);
+            append(container, divMajor);
+
+          })
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    }
+    const container = document.getElementById('portfolio-grid');
+    const url = '/api/versiones/';
+    load_data(url);
+
+  </script>
+  <script type="text/javascript">
+    window.onload = function () {
+      let div = document.getElementById('home');
+      div.style = 'border-bottom: 2px solid red; color: #D0021B; padding-bottom: 15px;';
+    }
+  </script>
+{% endblock javascript %}

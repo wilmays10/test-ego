@@ -1,0 +1,45 @@
+{% load static %}
+
+{% block header %}
+    <nav class="navbar bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}">
+          <img src="{% static 'images/Logo.svg' %}" alt="" width="30" height="24">
+        </a>
+        <div class="tab-title">
+          <a href="{% url 'home' %}" id="home" >Modelos</a>
+          <a href="{% url 'data' %}" id="data" >Ficha de modelos</a>
+        </div>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span>Menú</span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="list-group list-group-flush">
+              <a class="list-group-item list-group-item-action" aria-current="true">
+                  <h5 class="navbar-text">Modelos</h5>
+                  <h5 class="navbar-text">Servicios y accesorios</h5>
+                  <h5 class="navbar-text">Financiación</h5>
+                  <h5 class="navbar-text">Reviews y comunidad</h5>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                  <h5 class="navbar-text">Toyota Mobility Service</h5>
+                  <h5 class="navbar-text">Toyota Gazoo Racing</h5>
+                  <h5 class="navbar-text">Toyota Híbridos</h5>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                  <h5 class="navbar-text">Concesionarios</h5>
+                  <h5 class="navbar-text">Test Drive</h5>
+                  <h5 class="navbar-text">Contacto</h5>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+{% endblock header %}
